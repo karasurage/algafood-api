@@ -16,7 +16,7 @@
     <name>algafood-api</name>
     <description>API de delivery de comida</description>
     <packaging>pom</packaging>
-    <url></url>
+    <url>https://github.com/karasurage/algafood-api</url>
 
     <properties>
         <java.version>11</java.version>
