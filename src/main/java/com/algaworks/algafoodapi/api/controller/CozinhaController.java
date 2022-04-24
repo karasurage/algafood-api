@@ -34,7 +34,7 @@ public class CozinhaController {
         return cozinhaRepository.findAll();
     }
 
-    @GetMapping(value = "/{cozinhaId}")
+    @GetMapping("/{cozinhaId}")
     public Cozinha buscar(@PathVariable Long cozinhaId) {
         return cadastroCozinha.buscarOuFalhar(cozinhaId);
     }
@@ -47,7 +47,7 @@ public class CozinhaController {
 
     @PutMapping("/{cozinhaId}")
     public Cozinha atualizar(@PathVariable Long cozinhaId,
-                             @RequestBody Cozinha cozinha) {
+                             @RequestBody @Valid Cozinha cozinha) {
         Cozinha cozinhaAtual = cadastroCozinha.buscarOuFalhar(cozinhaId);
 
         BeanUtils.copyProperties(cozinha, cozinhaAtual, "id");
