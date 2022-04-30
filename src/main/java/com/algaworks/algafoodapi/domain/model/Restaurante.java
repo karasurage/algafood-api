@@ -1,6 +1,7 @@
 package com.algaworks.algafoodapi.domain.model;
 
-import com.algaworks.algafoodapi.Groups;
+import com.algaworks.algafoodapi.core.validation.Groups;
+import com.algaworks.algafoodapi.core.validation.TaxaFrete;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -42,8 +43,9 @@ public class Restaurante {
     @Column(nullable = false)
     private String nome;
 
-    @NotNull // adicionei porque o @PositiveOrZero não valida se é nulo
-    @PositiveOrZero(message = "{TaxaFrete.invalida}")
+    @NotNull
+//    @PositiveOrZero
+    @TaxaFrete
     @Column(name = "taxa_frete", nullable = false)
     private BigDecimal taxaFrete;
 
