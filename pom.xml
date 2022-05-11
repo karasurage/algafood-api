@@ -26,9 +26,9 @@
         <start-class>com.algaworks.algafoodapi.AlgafoodApiApplication</start-class>
 
         <!-- Versao Testes -->
-        <junit-jupiter-api.version>5.8.2</junit-jupiter-api.version>
-        <hamcrest.version>2.2</hamcrest.version>
-        <powermock.version>2.0.9</powermock.version>
+<!--        <junit-jupiter-api.version>5.8.2</junit-jupiter-api.version>-->
+<!--        <hamcrest.version>2.2</hamcrest.version>-->
+<!--        <powermock.version>2.0.9</powermock.version>-->
         <!-- Versao Testes -->
 
         <!-- Versao Jacoco (Cobertura de Testes) -->
@@ -87,54 +87,59 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
         </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
 
         <!-- Config Testes -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.junit.vintage</groupId>
-                    <artifactId>junit-vintage-engine</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-test</artifactId>-->
+<!--            <scope>test</scope>-->
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.junit.vintage</groupId>-->
+<!--                    <artifactId>junit-vintage-engine</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
+<!--        </dependency>-->
 
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>${junit-jupiter-api.version}</version>
-            <scope>test</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.junit.jupiter</groupId>-->
+<!--            <artifactId>junit-jupiter-api</artifactId>-->
+<!--            <version>${junit-jupiter-api.version}</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
 
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>${junit-jupiter-api.version}</version>
-            <scope>test</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.junit.jupiter</groupId>-->
+<!--            <artifactId>junit-jupiter-engine</artifactId>-->
+<!--            <version>${junit-jupiter-api.version}</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
 
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest</artifactId>
-            <version>${hamcrest.version}</version>
-            <scope>test</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.hamcrest</groupId>-->
+<!--            <artifactId>hamcrest</artifactId>-->
+<!--            <version>${hamcrest.version}</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
 
-        <dependency>
-            <groupId>org.powermock</groupId>
-            <artifactId>powermock-module-junit4</artifactId>
-            <version>${powermock.version}</version>
-            <scope>test</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.powermock</groupId>-->
+<!--            <artifactId>powermock-module-junit4</artifactId>-->
+<!--            <version>${powermock.version}</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
 
-        <dependency>
-            <groupId>org.powermock</groupId>
-            <artifactId>powermock-api-mockito2</artifactId>
-            <version>${powermock.version}</version>
-            <scope>test</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.powermock</groupId>-->
+<!--            <artifactId>powermock-api-mockito2</artifactId>-->
+<!--            <version>${powermock.version}</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
         <!-- Config Testes -->
     </dependencies>
 
