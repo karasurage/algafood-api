@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.6</version>
+        <version>2.7.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -26,9 +26,9 @@
         <start-class>com.algaworks.algafoodapi.AlgafoodApiApplication</start-class>
 
         <!-- Versao Testes -->
-<!--        <junit-jupiter-api.version>5.8.2</junit-jupiter-api.version>-->
-<!--        <hamcrest.version>2.2</hamcrest.version>-->
-<!--        <powermock.version>2.0.9</powermock.version>-->
+        <!--        <junit-jupiter-api.version>5.8.2</junit-jupiter-api.version>-->
+        <!--        <hamcrest.version>2.2</hamcrest.version>-->
+        <!--        <powermock.version>2.0.9</powermock.version>-->
         <!-- Versao Testes -->
 
         <!-- Versao Jacoco (Cobertura de Testes) -->
@@ -37,6 +37,7 @@
         <sonar.jacoco.reportPath>${project.basedir}/target/jacoco.exec</sonar.jacoco.reportPath>
         <sonar.language>java</sonar.language>
         <!-- Versao Jacoco (Cobertura de Testes) -->
+        <modelmapper.version>3.0.0</modelmapper.version>
     </properties>
 
     <dependencies>
@@ -56,8 +57,8 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
-<!--            <scope>runtime</scope>-->
-<!--            <optional>true</optional>-->
+            <!--            <scope>runtime</scope>-->
+            <!--            <optional>true</optional>-->
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -99,53 +100,58 @@
         </dependency>
 
         <!-- Config Testes -->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-test</artifactId>-->
-<!--            <scope>test</scope>-->
-<!--            <exclusions>-->
-<!--                <exclusion>-->
-<!--                    <groupId>org.junit.vintage</groupId>-->
-<!--                    <artifactId>junit-vintage-engine</artifactId>-->
-<!--                </exclusion>-->
-<!--            </exclusions>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-test</artifactId>-->
+        <!--            <scope>test</scope>-->
+        <!--            <exclusions>-->
+        <!--                <exclusion>-->
+        <!--                    <groupId>org.junit.vintage</groupId>-->
+        <!--                    <artifactId>junit-vintage-engine</artifactId>-->
+        <!--                </exclusion>-->
+        <!--            </exclusions>-->
+        <!--        </dependency>-->
 
-<!--        <dependency>-->
-<!--            <groupId>org.junit.jupiter</groupId>-->
-<!--            <artifactId>junit-jupiter-api</artifactId>-->
-<!--            <version>${junit-jupiter-api.version}</version>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.junit.jupiter</groupId>-->
+        <!--            <artifactId>junit-jupiter-api</artifactId>-->
+        <!--            <version>${junit-jupiter-api.version}</version>-->
+        <!--            <scope>test</scope>-->
+        <!--        </dependency>-->
 
-<!--        <dependency>-->
-<!--            <groupId>org.junit.jupiter</groupId>-->
-<!--            <artifactId>junit-jupiter-engine</artifactId>-->
-<!--            <version>${junit-jupiter-api.version}</version>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.junit.jupiter</groupId>-->
+        <!--            <artifactId>junit-jupiter-engine</artifactId>-->
+        <!--            <version>${junit-jupiter-api.version}</version>-->
+        <!--            <scope>test</scope>-->
+        <!--        </dependency>-->
 
-<!--        <dependency>-->
-<!--            <groupId>org.hamcrest</groupId>-->
-<!--            <artifactId>hamcrest</artifactId>-->
-<!--            <version>${hamcrest.version}</version>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.hamcrest</groupId>-->
+        <!--            <artifactId>hamcrest</artifactId>-->
+        <!--            <version>${hamcrest.version}</version>-->
+        <!--            <scope>test</scope>-->
+        <!--        </dependency>-->
 
-<!--        <dependency>-->
-<!--            <groupId>org.powermock</groupId>-->
-<!--            <artifactId>powermock-module-junit4</artifactId>-->
-<!--            <version>${powermock.version}</version>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.powermock</groupId>-->
+        <!--            <artifactId>powermock-module-junit4</artifactId>-->
+        <!--            <version>${powermock.version}</version>-->
+        <!--            <scope>test</scope>-->
+        <!--        </dependency>-->
 
-<!--        <dependency>-->
-<!--            <groupId>org.powermock</groupId>-->
-<!--            <artifactId>powermock-api-mockito2</artifactId>-->
-<!--            <version>${powermock.version}</version>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.powermock</groupId>-->
+        <!--            <artifactId>powermock-api-mockito2</artifactId>-->
+        <!--            <version>${powermock.version}</version>-->
+        <!--            <scope>test</scope>-->
+        <!--        </dependency>-->
         <!-- Config Testes -->
+        <dependency>
+            <groupId>org.modelmapper</groupId>
+            <artifactId>modelmapper</artifactId>
+            <version>${modelmapper.version}</version>
+        </dependency>
     </dependencies>
 
     <build>

@@ -1,4 +1,4 @@
-package com.algaworks.algafoodapi.api.model.dto;
+package com.algaworks.algafoodapi.api.model;
 
 import java.math.BigDecimal;
 import lombok.Getter;
