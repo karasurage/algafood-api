@@ -23,11 +23,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/estados")
 public class EstadoController {
 
-    @Autowired
-    private EstadoRepository estadoRepository;
+    private final EstadoRepository estadoRepository;
+
+    private final CadastroEstadoService cadastroEstado;
 
     @Autowired
-    private CadastroEstadoService cadastroEstado;
+    public EstadoController(EstadoRepository estadoRepository, CadastroEstadoService cadastroEstado) {
+        this.estadoRepository = estadoRepository;
+        this.cadastroEstado = cadastroEstado;
+    }
 
     @GetMapping
     public List<Estado> listar() {
