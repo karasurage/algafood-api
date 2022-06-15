@@ -26,24 +26,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/restaurantes")
 public class RestauranteController {
 
-    private final RestauranteRepository restauranteRepository;
-
-    private final CadastroRestauranteService cadastroRestaurante;
-
-    private final RestauranteModelAssembler restauranteModelAssembler;
-
-    private final RestauranteInputDisassembler restauranteInputDisassembler;
+    @Autowired
+    private RestauranteRepository restauranteRepository;
 
     @Autowired
-    public RestauranteController(RestauranteRepository restauranteRepository,
-                                 CadastroRestauranteService cadastroRestaurante,
-                                 RestauranteModelAssembler restauranteModelAssembler,
-                                 RestauranteInputDisassembler restauranteInputDisassembler) {
-        this.restauranteRepository = restauranteRepository;
-        this.cadastroRestaurante = cadastroRestaurante;
-        this.restauranteModelAssembler = restauranteModelAssembler;
-        this.restauranteInputDisassembler = restauranteInputDisassembler;
-    }
+    private CadastroRestauranteService cadastroRestaurante;
+
+    @Autowired
+    private RestauranteModelAssembler restauranteModelAssembler;
+
+    @Autowired
+    private RestauranteInputDisassembler restauranteInputDisassembler;
 
     @GetMapping
     public List<RestauranteModel> listar() {

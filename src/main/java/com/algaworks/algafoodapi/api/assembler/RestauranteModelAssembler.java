@@ -11,12 +11,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class RestauranteModelAssembler {
 
-    private final ModelMapper modelMapper;
-
     @Autowired
-    public RestauranteModelAssembler(ModelMapper modelMapper) {
-        this.modelMapper = modelMapper;
-    }
+    private ModelMapper modelMapper;
 
     public RestauranteModel toModel(Restaurante restaurante) {
         return modelMapper.map(restaurante, RestauranteModel.class);
@@ -24,7 +20,7 @@ public class RestauranteModelAssembler {
 
     public List<RestauranteModel> toCollectionModel(List<Restaurante> restaurantes) {
         return restaurantes.stream()
-                .map(this::toModel)
+                .map(restaurante -> toModel(restaurante))
                 .collect(Collectors.toList());
     }
 
