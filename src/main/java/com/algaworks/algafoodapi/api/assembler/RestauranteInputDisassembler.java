@@ -9,14 +9,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class RestauranteInputDisassembler {
 
-    private final ModelMapper modelMapper;
-
     @Autowired
-    public RestauranteInputDisassembler(ModelMapper modelMapper) {
-        this.modelMapper = modelMapper;
-    }
+    private ModelMapper modelMapper;
 
     public Restaurante toDomainObject(RestauranteInput restauranteInput) {
         return modelMapper.map(restauranteInput, Restaurante.class);
     }
+
 }

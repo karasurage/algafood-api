@@ -38,6 +38,7 @@
         <sonar.language>java</sonar.language>
         <!-- Versao Jacoco (Cobertura de Testes) -->
         <modelmapper.version>3.0.0</modelmapper.version>
+        <flyway-core.version>8.5.12</flyway-core.version>
     </properties>
 
     <dependencies>
@@ -83,6 +84,12 @@
         <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-core</artifactId>
+            <version>${flyway-core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-mysql</artifactId>
+            <version>${flyway-core.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>

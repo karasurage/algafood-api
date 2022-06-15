@@ -4,15 +4,13 @@ import java.math.BigDecimal;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
 @Setter
+@Getter
 public class RestauranteModel {
 
     private Long id;
-
     private String nome;
-
-    private BigDecimal taxaFrete;
-
+    private BigDecimal precoFrete;
     private CozinhaModel cozinha;
+
 }
